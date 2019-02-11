@@ -13,7 +13,7 @@ trap ("SIGINT") {
 clean
 }
 
-128.times do |i|
+24.times do |i|
 puts i
 name = "cont-#{i}"
 system "docker rm -f -v #{name}"
