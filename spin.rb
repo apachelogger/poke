@@ -17,7 +17,7 @@ clean
 puts i
 name = "cont-#{i}"
 system "docker rm -f -v #{name}"
-system "docker create -v `pwd`:/workspace --name #{name} ubuntu:18.04 /workspace/run.sh"
+system "docker create -v `pwd`:/workspace --name #{name} pangea/ubuntu:bionic /workspace/run.sh"
 system "docker start #{name}"
 @conts << name
 end
